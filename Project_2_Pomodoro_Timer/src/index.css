@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "tailwindcss";
+@tailwind utilities;
+
+body {
+  background-color: #001A23; /* Ink Black */
+  color: #E8F1F2; /* Alice Blue */
+}
+
+/* Custom styles for circular progress bar */
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #B3EFB2 !important; /* Celadon */
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #31493C !important; /* Pine Teal */
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #E8F1F2 !important; /* Alice Blue */
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+}
