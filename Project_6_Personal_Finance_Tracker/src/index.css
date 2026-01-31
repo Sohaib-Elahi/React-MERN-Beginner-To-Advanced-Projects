@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap'); */
+
+
+@layer base {
+  * {
+    @apply border-notion-border;
+  }
+  
+  body {
+    @apply bg-notion-surface text-notion-text antialiased;
+    font-family: 'Space Grotesk';
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-notion-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-notion-textLight;
+  }
+}
+
+@layer components {
+  .notion-card {
+    @apply rounded-notion border border-notion-border bg-notion-bg shadow-sm transition-shadow hover:shadow-md;
+  }
+
+  .notion-input {
+    @apply rounded-notion border-notion-border bg-notion-bg text-sm focus:ring-1 focus:ring-notion-accent;
+  }
+
+  .notion-button {
+    @apply rounded-notion px-3 py-1.5 text-sm font-medium transition-all;
+  }
+}
